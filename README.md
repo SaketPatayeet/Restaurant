@@ -23,8 +23,7 @@ This is a **Streamlit-based AI-powered Restaurant Menu Chatbot** that allows use
 git clone https://github.com/your-username/restaurant-menu-chatbot.git
 cd restaurant-menu-chatbot
 
-### 2️⃣ Set Up a Virtual Environment
-```bash
+2️⃣ Set Up a Virtual Environment
 # On macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
@@ -33,29 +32,28 @@ source venv/bin/activate
 python -m venv venv
 venv\Scripts\activate
 
-### 3️⃣ Install Dependencies
-```bash
+3️⃣ Install Dependencies
 pip install -r requirements.txt
 
 🔑 Google Gemini API Key Setup
 This chatbot uses Google Gemini AI to process menu-related queries. You need to configure an API key.
 
 How to Get a Gemini API Key:
-Go to Google AI Studio
-Sign in with your Google account
-Generate an API key from the API Keys section
-Copy the API key
+1)Go to Google AI Studio
+2)Sign in with your Google account
+3)Generate an API key from the API Keys section
+4)Copy the API key
+
 Add API Key to the Project:
-Open the app.py file
-Replace the api_key value in this line:
-```bash
+1)Open the app.py file
+
+2)Replace the api_key value in this line:
 genai.configure(api_key="YOUR_GEMINI_API_KEY_HERE")
 
-Save the file
+3)Save the file
+
 🏃‍♂️ Running the Application
 After setting up everything, run the application using Streamlit:
-
-```bash
 streamlit run app.py
 This will open the web app in your browser.
 
@@ -68,15 +66,8 @@ price
 category
 cuisine
 preparation_time
-availability (optional)
-ratings (optional)
-
-Example CSV:
-```bash
-dish_name,price,category,cuisine,preparation_time,availability,ratings
-Pasta,200,Main Course,Italian,15,Available,4.5
-Pizza,300,Main Course,Italian,20,Not Available,4.7
-Salad,150,Starter,Healthy,10,Available,4.2
+availability 
+ratings
 
 🍲 Placing an Order
 Go to the Place Order section.
@@ -86,15 +77,14 @@ Order details are automatically saved to the SQLite database (restaurant_orders.
 
 📚 Viewing Order Details in Database
 To view saved orders:
-
-```bash
 sqlite3 restaurant_orders.db
+
 Then run:
-```bash
 SELECT * FROM orders;
+
 📝 Generating Order Confirmation
 After confirming the order, the chatbot will generate an order summary.
 Optionally, download the confirmation receipt in a PDF format.
+
 📜 License
 This project is licensed under the MIT License.
-
