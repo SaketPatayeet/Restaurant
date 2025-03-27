@@ -4,7 +4,7 @@ import sqlite3
 import google.generativeai as genai
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyBFSEsbk_DpSifE29Il14piCfRyLwfNdHI")
+genai.configure(api_key="YOUR_API_KEY")
 
 # --- Database Setup ---
 DB_FILE = "restaurant_orders.db"
